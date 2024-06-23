@@ -84,7 +84,9 @@ document.addEventListener('DOMContentLoaded', () => {
     function showContactInfo(contactInfo) {
         contactInfo.style.display = 'block';
         contactInfo.style.transition = 'opacity 500ms ease';
-        contactInfo.style.opacity = '1';
+        requestAnimationFrame(() => {
+            contactInfo.style.opacity = '1';
+        });
     }
 
     function hideContactInfo(contactInfo) {
