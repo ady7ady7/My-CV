@@ -4,7 +4,7 @@ html, body {
     height: 100%;
     font-family: 'Roboto', sans-serif;
     font-optical-sizing: auto;
-    font-weight: 400;
+    font-weight: 600;
     background: url('https://github.com/ady7ady7/My-CV/blob/main/road-adjusted.png') no-repeat calc(50% - 50px) top / cover;
     color: black;
     text-align: center;
