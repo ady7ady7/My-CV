@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (switchToPolishButton) {
         switchToPolishButton.addEventListener('click', () => {
             // Redirect to the Polish branch
-            window.location.href = 'https://github.com/ady7ady7/The-Path-pl';
+            window.location.href = 'https://ady7ady7.github.io/The-Path-pl/';
         });
     }
 
