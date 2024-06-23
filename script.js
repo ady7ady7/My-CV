@@ -68,4 +68,16 @@ document.addEventListener('DOMContentLoaded', () => {
             infoBox.style.display = 'none';
         }, 500); // Duration should match transition-duration
     }
+
+    // Contact Info toggle
+    const contactButton = document.querySelector('.contact-button');
+    const contactInfo = document.querySelector('.contact-info');
+
+    contactButton.addEventListener('click', () => {
+        if (contactInfo.style.display === 'none' || contactInfo.style.display === '') {
+            contactInfo.style.display = 'block';
+        } else {
+            contactInfo.style.display = 'none';
+        }
+    });
 });
