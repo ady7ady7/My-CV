@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (contactButton && contactInfo) {
         contactButton.addEventListener('click', () => {
-            if (contactInfo.style.display === 'none' || contactInfo.style.display === '') {
+            if (contactInfo.style.opacity === '0' || contactInfo.style.opacity === '') {
                 showContactInfo(contactInfo);
             } else {
                 hideContactInfo(contactInfo);
@@ -83,18 +83,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function showContactInfo(contactInfo) {
         contactInfo.style.display = 'block';
-        contactInfo.style.transition = 'opacity 500ms ease';
         requestAnimationFrame(() => {
+            contactInfo.style.transition = 'opacity 500ms ease';
             contactInfo.style.opacity = '1';
         });
     }
 
     function hideContactInfo(contactInfo) {
-        contactInfo.style.transition = 'opacity 500ms ease';
-        contactInfo.style.opacity = '0';
+        requestAnimationFrame(() => {
+            contactInfo.style.transition = 'opacity 500ms ease';
+            contactInfo.style.opacity = '0';
+        });
+
         setTimeout(() => {
             contactInfo.style.display = 'none';
-        }, 500);
+        }, 500); // Match this timeout with the duration of opacity transition
     }
 });
-
