@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const switchToPolishButton = document.getElementById('switch-to-polish');
     if (switchToPolishButton) {
         switchToPolishButton.addEventListener('click', () => {
-            // Redirect to the Polish branch
             window.location.href = 'https://ady7ady7.github.io/The-Path-pl/';
         });
     }
@@ -25,26 +24,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function showLinesWithDelay(infoBox) {
         const lines = infoBox.querySelectorAll('p');
-        let interval = 1200; // 1000ms = 1 second
-        
-        // Initially hide all lines
+        let interval = 1200;
+
         lines.forEach(line => {
             line.style.opacity = '0';
         });
 
-        // Calculate full height
         infoBox.style.display = 'block';
         infoBox.style.maxHeight = 'none';
         const fullHeight = infoBox.scrollHeight + 'px';
         infoBox.style.maxHeight = '0px';
 
-        // Expand the box to its full size first
         infoBox.style.transition = 'max-height 500ms ease';
         requestAnimationFrame(() => {
             infoBox.style.maxHeight = fullHeight;
         });
 
-        // Once the box is fully expanded, reveal the lines with delay
         setTimeout(() => {
             let currentDelay = 0;
             lines.forEach((line, index) => {
@@ -54,11 +49,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     line.style.opacity = '1';
                 }, currentDelay);
             });
-            // Remove max-height after animation completes to allow flexible height for resizing
             setTimeout(() => {
                 infoBox.style.maxHeight = 'none';
             }, interval * lines.length);
-        }, 500); // Wait for the box to fully expand
+        }, 500);
     }
 
     function hideLines(infoBox) {
@@ -66,35 +60,27 @@ document.addEventListener('DOMContentLoaded', () => {
         lines.forEach(line => {
             line.style.opacity = '0';
         });
-        infoBox.style.transition = 'max-height 500ms ease'; // Add a transition for hiding
+        infoBox.style.transition = 'max-height 500ms ease';
         requestAnimationFrame(() => {
             infoBox.style.maxHeight = '0px';
         });
 
-        // Ensure display is set to 'none' after transition ends
         setTimeout(() => {
             infoBox.style.display = 'none';
-        }, 500); // Duration should match transition-duration
+        }, 500);
     }
 
-    // Contact Info toggle
     const contactButton = document.querySelector('.contact-button');
     const contactInfo = document.querySelector('.contact-info');
 
-    // Initially hide contactInfo through JavaScript
-    if (contactInfo) {
-      contactInfo.style.display = 'none';
-    }
-
     contactButton.addEventListener('click', () => {
         console.log('Button Clicked');
-        if (contactInfo.style.display === 'none' || contactInfo.style.display === '') {
-            contactInfo.style.display = 'block';
-            contactInfo.style.maxHeight = 'none';
-            console.log('Contact info is now visible');
-        } else {
-            contactInfo.style.display = 'none';
+        if (contactInfo.classList.contains('active')) {
+            contactInfo.classList.remove('active');
             console.log('Contact info is now hidden');
+        } else {
+            contactInfo.classList.add('active');
+            console.log('Contact info is now visible');
         }
     });
 });
