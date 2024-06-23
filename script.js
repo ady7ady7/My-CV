@@ -97,6 +97,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         setTimeout(() => {
             contactInfo.style.display = 'none';
-        }, 500); // Match this timeout with the duration of opacity transition
+        }, 5000); // Match this timeout with the duration of opacity transition
     }
 });
