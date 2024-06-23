@@ -15,7 +15,7 @@ body {
     height: 2700px;
 }
 
-.resume, .trading-journey {
+.resume, .trading-journey, .contact-me {
     padding: 20px;
     border-radius: 10px;
     max-width: 600px;
@@ -77,46 +77,23 @@ h1 {
     max-width: 550px;
 }
 
-
-
 .contact-me {
-    margin-top: 50px;
-    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
-.contact-btn {
+.contact-button {
     padding: 10px 20px;
-    font-size: 1em;
+    font-size: 16px;
     cursor: pointer;
-    border: none;
-    border-radius: 5px;
-    background-color: #007BFF;
-    color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease;
-}
-
-.contact-btn:hover {
-    background-color: #0056b3;
 }
 
 .contact-info {
     display: none;
-    margin: 20px auto;
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 600px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
-    background: rgba(255, 255, 255, 0.05); /* Adjusted opacity */
+    margin-top: 20px;
 }
 
-.contact-photo {
-    width: 100%;
-    height: auto;
-    max-height: 300px;
+.contact-info img {
+    max-width: 100%;
     border-radius: 10px;
-    margin-bottom: 15px;
 }
