@@ -81,10 +81,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const contactButton = document.querySelector('.contact-button');
     const contactInfo = document.querySelector('.contact-info');
 
+    // Initially hide contactInfo through JavaScript
+    if (contactInfo) {
+      contactInfo.style.display = 'none';
+    }
+
     contactButton.addEventListener('click', () => {
         console.log('Button Clicked');
         if (contactInfo.style.display === 'none' || contactInfo.style.display === '') {
             contactInfo.style.display = 'block';
+            contactInfo.style.maxHeight = 'none';
             console.log('Contact info is now visible');
         } else {
             contactInfo.style.display = 'none';
