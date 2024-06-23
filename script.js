@@ -68,21 +68,4 @@ document.addEventListener('DOMContentLoaded', () => {
       infoBox.style.display = 'none';
     }, 500);
   }
-
-  const contactButton = document.querySelector('.contact-button');
-  const contactInfo = document.querySelector('.contact-info');
-
-  if (contactButton) {
-    contactButton.addEventListener('click', (event) => {
-      event.stopPropagation();  // Stop the event from propagating
-      console.log('Button Clicked');
-      if (contactInfo.classList.contains('active')) {
-        contactInfo.classList.remove('active');
-        console.log('Contact info is now hidden');
-      } else {
-        contactInfo.classList.add('active');
-        console.log('Contact info is now visible');
-      }
-    }, { once: true });  // Only allow the event listener to be added once
-  }
 });
