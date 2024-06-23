@@ -63,7 +63,6 @@ h1 {
 }
 
 .trading-journey {
-    /* Removed padding-top */
     position: relative;
 }
 
@@ -71,5 +70,21 @@ h1 {
     margin-top: 20px;
     width: 100%;
     max-width: 550px;
+}
 
+.contact-info {
+    display: none;
+    margin: 10px auto;
+    padding: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    text-align: left;
+    max-width: 600px;
+}
 
+.contact-info img {
+    max-width: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
