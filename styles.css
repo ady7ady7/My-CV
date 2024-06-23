@@ -2,30 +2,30 @@ html, body {
     margin: 0;
     width: 100%;
     height: 100%;
-    font-family: 'Roboto', sans-serif; /* Updated font-family setting to use Roboto */
+    font-family: 'Roboto', sans-serif;
     font-optical-sizing: auto;
-    font-weight: 400; /* Use Roboto's default weight */
-    background: url('road-transformed.png') no-repeat center top / cover;
+    font-weight: 400;
+    background: url('road-adjusted.png') no-repeat calc(50% - 50px) top / cover;
     color: black;
     text-align: center;
     overflow-y: auto;
 }
 
 body {
-    height: 3240px;  /* Height of the full HD experience */
+    height: 2700px;
 }
 
 .resume, .trading-journey {
-    background: rgba(255, 255, 255, 0.1);
     padding: 20px;
     border-radius: 10px;
     max-width: 600px;
     margin: 0 auto 20px;
     text-align: center;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.05); /* Adjusted opacity */
 }
 
 .resume {
@@ -37,100 +37,42 @@ h1 {
 }
 
 .section {
-    margin: 20px 0;
+    margin: 20px auto;
     padding: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 10px;
     position: relative;
-    background-color: rgba(255, 255, 255, 0.1);
-    cursor: pointer; /* Change cursor to pointer to indicate clickability */
+    background: rgba(255, 255, 255, 0.05); /* Adjusted opacity */
+    cursor: pointer;
+    max-width: 600px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .info {
     display: none;
     margin: 10px 0;
     padding: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.2);
-    text-align: left; /* Change to left align for better readability */
+    background: rgba(255, 255, 255, 0.1); /* Adjusted opacity */
+    text-align: left;
+    max-width: 600px;
 }
 
 .big-title {
     font-size: 2em;
     margin: 50px 0 20px;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.61);
 }
 
 .trading-journey {
     position: relative;
-    padding-bottom: 50px;  /* Prevent content from flowing over bottom margin */
+    padding-bottom: 50px;
 }
 
 .step {
-    margin-top: 20px;   /* Adjusted from absolute positioning */
+    margin-top: 20px;
     width: 100%;
-}
-
-/* Grid overlay styles */
-.grid-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;  /* Allow interaction with underlying content */
-    background-image:
-        linear-gradient(to right, rgba(255, 255, 255, 0.3) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(255, 255, 255, 0.3) 1px, transparent 1px);
-    background-size: 100px 100px;
-}
-
-.grid-overlay::before,
-.grid-overlay::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: white;
-    color: black;
-}
-
-.grid-overlay::before {
-    width: 100%;
-    height: 20px;
-    background: rgba(255, 255, 255, 0.7);
-}
-
-.grid-overlay::after {
-    width: 20px;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.7);
-}
-
-.grid-overlay::before {
-    display: flex;
-}
-
-.grid-overlay::after {
-    writing-mode: vertical-rl;
-    text-orientation: mixed;
-}
-
-.grid-overlay::before span,
-.grid-overlay::after span {
-    display: inline-block;
-    width: 100px;
-    height: 100px;
-    line-height: 20px;
-    text-align: center;
-    font-size: 0.7em;
-}
-
-.grid-overlay::before span {
-    border-right: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-.grid-overlay::after span {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    max-width: 550px;
 }
