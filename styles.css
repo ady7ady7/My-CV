@@ -71,31 +71,5 @@ h1 {
     margin-top: 20px;
     width: 100%;
     max-width: 550px;
-}
 
-.contact-me {
-   position: relative; /* Removed padding-top and padding-bottom */
-}
 
-.contact-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-.contact-info {
-    display: none;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s ease;
-}
-
-.contact-info.active {
-    display: block;
-    max-height: 500px; /** You can set this to a high enough value to reveal content */
-}
-
-.contact-info img {
-    max-width: 100%;
-    border-radius: 10px;
-}
