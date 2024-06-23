@@ -18,7 +18,7 @@ body {
 .resume, .trading-journey {
     padding: 20px;
     border-radius: 10px;
-    max-width: 600px;
+    max-width: 550px;
     margin: 0 auto 20px;
     text-align: center;
     border: 1px solid rgba(255, 255, 255, 0.2);
@@ -44,7 +44,7 @@ h1 {
     position: relative;
     background: rgba(255, 255, 255, 0.05); /* Adjusted opacity */
     cursor: pointer;
-    max-width: 600px;
+    max-width: 550px;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
 }
