@@ -82,10 +82,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const contactInfo = document.querySelector('.contact-info');
 
     contactButton.addEventListener('click', () => {
+        console.log('Button Clicked');
         if (contactInfo.style.display === 'none' || contactInfo.style.display === '') {
             contactInfo.style.display = 'block';
+            console.log('Contact info is now visible');
         } else {
             contactInfo.style.display = 'none';
+            console.log('Contact info is now hidden');
         }
     });
 });
