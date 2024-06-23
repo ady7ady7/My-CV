@@ -1,6 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
     const sections = document.querySelectorAll('.section');
 
+    const switchToPolishButton = document.getElementById('switch-to-polish');
+    if (switchToPolishButton) {
+        switchToPolishButton.addEventListener('click', () => {
+            // Redirect to the Polish branch
+            window.location.href = 'https://github.com/ady7ady7/The-Path/tree/main-pl';
+        });
+    }
+
     sections.forEach(section => {
         section.addEventListener('click', () => {
             const infoBox = section.nextElementSibling;
