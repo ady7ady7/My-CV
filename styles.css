@@ -5,7 +5,7 @@ html, body {
     font-family: 'Roboto', sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
-    background: url('road-adjusted.png') no-repeat calc(50% - 50px) top / cover;
+    background: url('https://github.com/ady7ady7/My-CV/blob/main/road-adjusted.png') no-repeat calc(50% - 50px) top / cover;
     color: black;
     text-align: center;
     overflow-y: auto;
