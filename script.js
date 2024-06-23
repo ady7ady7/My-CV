@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const sections = document.querySelectorAll('.section');
     const switchToPolishButton = document.getElementById('switch-to-polish');
-    const contactButton = document.querySelector('.contact-button');
+    const contactButton = document.querySelector('.contact-me .section');  // Ensure this targets the correct button
     const contactInfo = document.querySelector('.contact-info');
 
     if (switchToPolishButton) {
@@ -27,9 +27,8 @@ document.addEventListener('DOMContentLoaded', () => {
         contactButton.addEventListener('click', () => {
             if (contactInfo.style.display === 'none' || contactInfo.style.display === '') {
                 showContactInfo(contactInfo);
-            } else {
-                hideContactInfo(contactInfo);
             }
+            // No need to hide contact info once it's shown
         });
     }
 
@@ -89,11 +88,5 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    function hideContactInfo(contactInfo) {
-        contactInfo.style.transition = 'opacity 500ms ease';
-        contactInfo.style.opacity = '0';
-        setTimeout(() => {
-            contactInfo.style.display = 'none';
-        }, 500);
-    }
+    // Removing hideContactInfo since we don't need it
 });
