@@ -84,10 +84,15 @@ h1 {
 }
 
 .contact-info {
-    display: none; /* Initially hidden */
-    max-height: 0; /* Prevent any height issues initially */
-    overflow: hidden; /* Ensure no overflow is shown */
-    transition: max-height 0.5s ease; /* Smooth transition */
+    display: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+
+.contact-info.active {
+    display: block;
+    max-height: 500px; /** You can set this to a high enough value to reveal content */
 }
 
 .contact-info img {
