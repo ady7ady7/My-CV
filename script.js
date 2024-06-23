@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Get all section elements
     const sections = document.querySelectorAll('.section');
 
     sections.forEach(section => {
@@ -7,7 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
             const infoBox = section.nextElementSibling;
 
             if (infoBox && infoBox.classList.contains('info')) {
-                // Toggle the display of the info box
                 if (infoBox.style.maxHeight === '0px' || infoBox.style.maxHeight === '') {
                     showLinesWithDelay(infoBox);
                 } else {
@@ -19,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function showLinesWithDelay(infoBox) {
         const lines = infoBox.querySelectorAll('p');
-        let interval = 700; // 1000ms = 1 second
+        let interval = 1500; // 1000ms = 1 second
         
         // Initially hide all lines
         lines.forEach(line => {
