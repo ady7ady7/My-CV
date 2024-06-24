@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function showLinesWithDelay(infoBox) {
         const lines = infoBox.querySelectorAll('p');
-        let interval = 1200;
+        let interval = 800;
 
         lines.forEach(line => {
             line.style.opacity = '0';
